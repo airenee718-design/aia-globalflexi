@@ -1,39 +1,668 @@
-AIA · 友邦保险
-「爱伴航」保险计划 2
-Protect Elite Plus 2 — 25年缴费 · 美元保单
-👤 昕昀女士 · 40岁 · 非吸烟者
-💰 基本保额 USD 200,000
-📅 年缴标准保费 USD 8,446
-⭐ 首10年升级 +USD 70,000（35%）
-📋
-产品组合概览
-🔵 爱伴航（主险）
-保额：USD 200,000
-首10年升级保额 +USD 70,000（总保额的35%）
-年缴标准保费：USD 8,446/年（付款期25年）
-保障年期：终身
-性质：分红危疾保险（含储蓄成分）
-🟢 免付保费附加契约（基本计划）
-保额：USD 200,000
-保费：USD 0.00（免额外保费）
-保障年期：20年
-保障内容：受保人60岁前永久完全丧失双眼视力、或丧失一肢及一眼、或丧失双肢，豁免对应保额保费
-🔬
-保障疾病范围总览
-58
-种危疾（57严重+1非严重）
-44
-种早期危疾
-10×
-多重赔付（至85岁）
-600%
-癌症总赔付上限
-📌 跟医疗险的区别：重疾险是「确诊即赔一笔钱」，不管实际医疗费用多少；医疗险是「实报实销」。两者互补，不冲突。
-⚡
-严重疾病保障
-保障项目
-内容
-保障病种
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIA 爱伴航（20万美元）— 保障分析</title>
+<style>
+  :root {
+    --brand-primary: #1a3a5c;
+    --brand-secondary: #2c5f8a;
+    --brand-accent: #d4a843;
+    --bg: #faf9f5;
+    --card: #ffffff;
+    --text: #2c3e50;
+    --text-light: #5a6c7d;
+    --text-muted: #8899aa;
+    --border: #e8e4d8;
+    --green: #1a8754;
+    --green-bg: #e6f4e6;
+    --red: #c53030;
+    --red-bg: #fde8e8;
+    --amber: #b7791f;
+    --amber-bg: #fef3c7;
+    --blue-bg: #e8f0fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, #0d2640 100%);
+    color: #fff;
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .hero .en { font-size: 13px; opacity: 0.65; margin-bottom: 16px; }
+  .hero .meta {
+    display: flex; justify-content: center; gap: 32px;
+    font-size: 13px; opacity: 0.85; flex-wrap: wrap;
+  }
+  .hero .meta span { display: inline-block; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 32px 20px 48px; }
+
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
+  }
+  .card-title {
+    font-size: 18px; font-weight: 700; color: var(--brand-primary);
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--brand-accent);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .card-title .icon { font-size: 22px; }
+
+  .summary-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .summary-card {
+    background: var(--blue-bg);
+    border-radius: 8px; padding: 16px; text-align: center;
+  }
+  .summary-card .num { font-size: 28px; font-weight: 800; color: var(--brand-primary); }
+  .summary-card .label { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+
+  .coverage-card {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .coverage-card h4 {
+    font-size: 16px; font-weight: 800; color: #c0392b;
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .coverage-table { width: 100%; border-collapse: collapse; }
+  .coverage-table td {
+    padding: 10px 8px; border-bottom: 1px dashed #e8b4b0;
+    font-size: 14px; vertical-align: top;
+  }
+  .coverage-table tr:last-child td { border-bottom: none; }
+  .coverage-table td:first-child { color: #555; font-weight: 500; }
+  .coverage-table td:last-child {
+    text-align: right; color: #c0392b; font-weight: 700;
+  }
+  .coverage-note {
+    margin-top: 12px; font-size: 13px; color: #a94442;
+    background: rgba(255,255,255,0.6); padding: 8px 12px;
+    border-radius: 6px; border-left: 3px solid #c0392b;
+  }
+
+  .verdict-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid var(--brand-primary);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+  }
+  .verdict-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 16px;
+  }
+  .verdict-score {
+    font-size: 48px; font-weight: 900; color: var(--brand-primary);
+    line-height: 1;
+  }
+  .verdict-score-label {
+    font-size: 14px; color: var(--text-light);
+  }
+  .verdict-stars {
+    color: var(--brand-accent); font-size: 28px; letter-spacing: 2px;
+  }
+  .verdict-title {
+    font-size: 18px; font-weight: 800; color: #222;
+    margin-bottom: 4px;
+  }
+  .verdict-reason {
+    font-size: 14px; color: var(--text-light);
+  }
+  .verdict-highlights {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px; margin-top: 16px;
+  }
+  .verdict-hl {
+    background: #fff; border-radius: 8px; padding: 14px 16px;
+    border-left: 4px solid var(--brand-accent);
+  }
+  .verdict-hl .hl-title { font-size: 14px; font-weight: 700; color: #222; margin-bottom: 4px; }
+  .verdict-hl .hl-desc { font-size: 13px; color: #555; line-height: 1.5; }
+
+  .highlight { background: #fffde7; border-left: 4px solid var(--brand-accent); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-size: 14px; }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px;
+  }
+  th {
+    background: var(--brand-primary); color: #fff; padding: 10px 14px;
+    text-align: left; font-weight: 600; font-size: 13px;
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) td { background: #faf9f5; }
+
+  .tag-win { background: var(--green-bg); color: #0d5c2e; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+  .tag-info { background: var(--blue-bg); color: #1a3a5c; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+  .tag-warn { background: var(--amber-bg); color: #7b5e10; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+
+  .plan-combo {
+    display: grid; grid-template-columns: 1fr;
+    gap: 16px; margin: 16px 0;
+  }
+  .plan-box {
+    background: var(--blue-bg); border-radius: 10px; padding: 20px;
+    border-left: 4px solid var(--brand-primary);
+  }
+  .plan-box h4 { font-size: 15px; margin-bottom: 8px; color: var(--brand-primary); }
+  .plan-box p { font-size: 13px; color: var(--text-light); margin: 4px 0; }
+  .plan-box .big { font-size: 22px; font-weight: 800; }
+
+  .cash-table { overflow-x: auto; }
+  .cash-table td.num { text-align: center; font-variant-numeric: tabular-nums; }
+  .cash-table th:first-child, .cash-table td:first-child { min-width: 64px; }
+  .cash-table td .irr { font-size: 12px; font-weight: 400; color: #1a8754; }
+
+  .source {
+    margin-top: 32px; font-size: 12px; color: var(--text-muted);
+    border-top: 1px solid var(--border); padding-top: 16px;
+  }
+  .source h4 { font-size: 13px; color: var(--text-light); margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .plan-combo { grid-template-columns: 1fr; }
+    .hero .meta { gap: 12px; }
+    .card { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">AIA · 友邦保险</div>
+  <h1>「爱伴航」保险计划 2</h1>
+  <div class="en">Protect Elite Plus 2 — 25年缴费 · 美元保单</div>
+  <div class="meta">
+    <span>👤 昕昀女士 · 40岁 · 非吸烟者</span>
+    <span>💰 基本保额 USD 200,000</span>
+    <span>📅 年缴标准保费 USD 8,446</span>
+    <span>⭐ 首10年升级 +USD 70,000（35%）</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- 产品组合概览 -->
+<div class="card">
+  <div class="card-title"><span class="icon">📋</span> 产品组合概览</div>
+  <div class="plan-combo">
+    <div class="plan-box">
+      <h4>🔵 爱伴航（主险）</h4>
+      <p>保额：<span class="big">USD 200,000</span></p>
+      <p style="font-size:12px;color:#1a8754;font-weight:600;margin-bottom:18px;">首10年升级保额 +USD 70,000（总保额的35%）</p>
+      <p>年缴标准保费：USD 8,446/年（付款期25年）</p>
+      <p>保障年期：终身</p>
+      <p>性质：分红危疾保险（含储蓄成分）</p>
+    </div>
+    <div class="plan-box" style="border-left-color:#2c8a4a;">
+      <h4>🟢 免付保费附加契约（基本计划）</h4>
+      <p>保额：USD 200,000</p>
+      <p>保费：USD 0.00（免额外保费）</p>
+      <p>保障年期：20年</p>
+      <p>保障内容：受保人60岁前永久完全丧失双眼视力、或丧失一肢及一眼、或丧失双肢，豁免对应保额保费</p>
+    </div>
+  </div>
+</div>
+
+<!-- 保障疾病总览 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🔬</span> 保障疾病范围总览</div>
+  <div class="summary-row">
+    <div class="summary-card">
+      <div class="num">58</div>
+      <div class="label">种危疾（57严重+1非严重）</div>
+    </div>
+    <div class="summary-card">
+      <div class="num">44</div>
+      <div class="label">种早期危疾</div>
+    </div>
+    <div class="summary-card">
+      <div class="num">10×</div>
+      <div class="label">多重赔付（至85岁）</div>
+    </div>
+    <div class="summary-card">
+      <div class="num">600%</div>
+      <div class="label">癌症总赔付上限</div>
+    </div>
+  </div>
+  <div class="highlight">
+    📌 <strong>跟医疗险的区别：</strong>重疾险是「确诊即赔一笔钱」，不管实际医疗费用多少；医疗险是「实报实销」。两者互补，不冲突。
+  </div>
+</div>
+
+<!-- 严重疾病保障 -->
+<div class="card">
+  <div class="card-title"><span class="icon">⚡</span> 严重疾病保障</div>
+  <table>
+    <tr><th>保障项目</th><th>内容</th></tr>
+    <tr>
+      <td>保障病种</td>
+      <td>56种严重疾病 + 不能独立生活 + 须作手术之脑动脉瘤（非严重）= <strong>共58种危疾</strong></td>
+    </tr>
+    <tr>
+      <td>赔偿比例</td>
+      <td><span class="tag-win">100%原有保额 = USD 200,000</span> + 非保证终期分红（第5年起）</td>
+    </tr>
+    <tr>
+      <td>首10年升级</td>
+      <td>额外 <span class="tag-win">+35% = USD 70,000</span>，身故/严重CI/ICU二级均可触发</td>
+    </tr>
+    <tr>
+      <td>赔偿方式</td>
+      <td>预支赔偿，从保额中扣除</td>
+    </tr>
+    <tr>
+      <td>不能独立生活</td>
+      <td><span class="tag-warn">仅保障至65岁</span>，赔100%原有保额</td>
+    </tr>
+    <tr>
+      <td>须作手术之脑动脉瘤</td>
+      <td>预支 <span class="tag-info">50%原有保额 = USD 100,000</span>，属非严重疾病</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 早期危疾 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🔍</span> 早期危疾保障</div>
+  <table>
+    <tr><th>类别</th><th>病种数</th><th>赔偿比例</th><th>特别说明</th></tr>
+    <tr>
+      <td>原位癌</td><td>1种（多器官）</td>
+      <td><span class="tag-win">20%保额 = USD 40,000</span></td>
+      <td>不同器官<strong>最多赔2次</strong>；排除CIN II以下/皮肤原位癌</td>
+    </tr>
+    <tr>
+      <td>早期恶性肿瘤/特定手术</td><td>9种</td>
+      <td><span class="tag-win">20%保额 = USD 40,000</span></td>
+      <td>含甲状腺T1N0M0、前列腺T1a/T1b、通波仔等</td>
+    </tr>
+    <tr>
+      <td>睡眠窒息/精神病</td><td>3种</td>
+      <td><span class="tag-info">10%-20%保额</span></td>
+      <td>保障至70岁；精神病每保单最多1次</td>
+    </tr>
+    <tr>
+      <td>骨质疏松连骨折</td><td>1种</td>
+      <td><span class="tag-info">10%保额 ≈ USD 20,000</span></td>
+      <td>保障至70岁</td>
+    </tr>
+    <tr>
+      <td>其他早期危疾</td><td>30种</td>
+      <td><span class="tag-info">20%保额 = USD 40,000</span></td>
+      <td>每种疾病最多1次预支赔偿</td>
+    </tr>
+  </table>
+  <div class="highlight" style="margin-top: 12px;">
+    🎁 <strong>双倍早期危疾赔偿：</strong>65岁或以后且保单已缴清时，若从未预支过任何赔偿，罹患早期危疾可获得<span class="tag-win">双倍赔付</span>，上限 USD 25,000。每保单仅限1次。
+  </div>
+</div>
+
+<!-- ICU保障 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🏥</span> 深切治疗（ICU）保障 — 不在重疾列表也能赔</div>
+  <table>
+    <tr><th>级别</th><th>条件</th><th>赔偿</th><th>地域限制</th></tr>
+    <tr>
+      <td><strong>级别一</strong></td>
+      <td>入住ICU连续<strong>72小时</strong>以上</td>
+      <td><span class="tag-win">20% 原有保额 = USD 40,000</span><br>个人上限 USD 50,000</td>
+      <td>中国大陆须在指定医院<br>非港澳降至<span class="tag-warn">10%</span></td>
+    </tr>
+    <tr>
+      <td><strong>级别二</strong></td>
+      <td>入住ICU连续<strong>120小时</strong>以上<br>+ 侵入性维生支持<br>+ 接受VHIS「复杂」手术</td>
+      <td><span class="tag-win">100% 原有保额 = USD 200,000</span><br>（扣减已预支金额）</td>
+      <td>中国大陆须在指定医院</td>
+    </tr>
+  </table>
+  <div class="highlight">
+    💡 <strong>即使疾病不在58+44种列表里</strong>——比如严重传染病、意外重伤进入ICU——只要满足条件就可以赔。这是爱伴航区别于普通危疾险的独特保障。
+  </div>
+</div>
+
+<!-- 多重赔付 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🔄</span> 10X多重危疾赔偿（最大亮点）</div>
+  <p style="margin-bottom:12px; color:var(--text-light);">当累计赔偿达<span class="tag-win">100%原有保额</span>后，后续保费豁免，以下5种高发重疾可继续赔<span class="tag-win">最多10次</span>，每次赔<span class="tag-win">100%保额 = USD 200,000</span>。</p>
+  <table>
+    <tr><th>疾病</th><th>最多赔偿次数</th><th>等候期</th></tr>
+    <tr>
+      <td>🟢 癌症（持续/扩散/复发/新确诊）</td>
+      <td><span class="tag-win">6次</span></td>
+      <td>癌症之间3年；其他情况1年</td>
+    </tr>
+    <tr>
+      <td>❤️ 心脏病</td>
+      <td><span class="tag-info">2次</span></td>
+      <td>须为新心脏病事件，全新诊断证明</td>
+    </tr>
+    <tr>
+      <td>🧠 中风</td>
+      <td><span class="tag-info">2次</span></td>
+      <td>须为新脑血管意外，全新神经功能障碍</td>
+    </tr>
+    <tr>
+      <td>🧠❤️ 心脏病+中风合计</td>
+      <td><span class="tag-warn">最多3次</span></td>
+      <td>两者共用上限</td>
+    </tr>
+    <tr>
+      <td>🧠 脑退化/柏金逊</td>
+      <td><span class="tag-info">1次</span></td>
+      <td>MMSE须≤10分</td>
+    </tr>
+  </table>
+  <div class="highlight" style="margin-top:12px;">
+    ⚠️ <strong>多重赔付仅限上述5种疾病</strong>，不涵盖其他严重疾病。保障至<span class="tag-warn">85岁</span>。前列腺癌70岁后须接受积极治疗方可再赔。
+  </div>
+</div>
+
+<!-- 持续癌症现金 -->
+<div class="card">
+  <div class="card-title"><span class="icon">💵</span> 持续癌症现金选项 — 等候期1年，启动每月现金支援</div>
+  <p style="margin-bottom:8px;">当已就癌症获得严重疾病/10X多重赔付后，可选择每月领取现金（代替10X多重癌症赔付）：</p>
+  <table>
+    <tr><th>项目</th><th>内容</th></tr>
+    <tr><td>每月金额</td><td><span class="tag-win">原有保额 × 5% = USD 10,000/月</span></td></tr>
+    <tr><td>最长领取</td><td><span class="tag-win">100个月</span>（合共 USD 1,000,000）</td></tr>
+    <tr><td>癌症总上限</td><td>原有保额的 <span class="tag-win">600% = USD 1,200,000</span>（含首次CI赔付）</td></tr>
+    <tr><td>等候期</td><td>上次癌症诊断后<span class="tag-warn">1年</span></td></tr>
+    <tr><td>条件</td><td>受保人仍在积极治疗中，或确诊末期癌症</td></tr>
+    <tr><td>提交报告</td><td>每6个月提交专科医生报告</td></tr>
+    <tr><td>保障到</td><td><span class="tag-warn">85岁</span></td></tr>
+  </table>
+  <div class="highlight">
+    🔀 <strong>跟10X多重赔付的关系：</strong>二者互斥——选择了持续癌症现金，10X多重下的癌症赔付就不再生效。但心脏病/中风/脑退化的多次赔付不受影响。
+  </div>
+</div>
+
+<!-- 脑退化年金 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🧠</span> 脑退化/柏金逊终身年金</div>
+  <table>
+    <tr><th>项目</th><th>内容</th></tr>
+    <tr><td>触发条件</td><td>已就脑退化/柏金逊获得CI或10X赔付（85岁前）<br>+ 脑退化须MMSE≤10分</td></tr>
+    <tr><td>等候期</td><td>赔付后 <span class="tag-warn">1年</span></td></tr>
+    <tr><td>年金金额</td><td><span class="tag-win">每年 USD 12,000</span>（原有保额×6%）</td></tr>
+    <tr><td>领取期间</td><td><span class="tag-win">终身</span>，直至保单终止</td></tr>
+    <tr><td>是否额外</td><td><span class="tag-win">✅ 额外给付</span>，不影响多重赔付次数</td></tr>
+  </table>
+  <div class="highlight">
+    🎯 <strong>年金启动机制：</strong>因为脑退化/柏金逊症产生赔付后，终身年金启动，提供长期经济支持。
+  </div>
+</div>
+
+<!-- 保费豁免 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🆓</span> 保费豁免机制</div>
+  <table>
+    <tr><th>豁免方式</th><th>触发条件</th><th>豁免范围</th></tr>
+    <tr>
+      <td><span class="tag-win">递减豁免</span></td>
+      <td>每次预支赔偿后，保费按剩余保额比例减少</td>
+      <td>基本计划保费</td>
+    </tr>
+    <tr>
+      <td><span class="tag-win">100%全免</span></td>
+      <td>累计预支赔偿达到<span class="tag-win">100%原有保额</span></td>
+      <td>基本计划余下保费全免</td>
+    </tr>
+    <tr>
+      <td><span class="tag-info">配偶身故豁免</span></td>
+      <td>配偶（保单持有人/受益人）于75岁前身故<br>且保单生效满2年</td>
+      <td>基本计划余下保费</td>
+    </tr>
+    <tr>
+      <td><span class="tag-info">免付保费附加契约</span></td>
+      <td>受保人60岁前因伤/病永久完全丧失双眼视力<br>或丧失一肢及一眼或丧失双肢</td>
+      <td>对应保额部分（上限USD 300,000）</td>
+    </tr>
+  </table>
+  <div class="highlight">
+    💡 <strong>保费越赔越少：</strong>每预支一部分赔偿，后续保费按比例减少。赔到100%保额后彻底不用再交。越需要钱的时候，交得越少。
+  </div>
+</div>
+
+<!-- 现金价值 -->
+<div class="card">
+  <div class="card-title"><span class="icon">📈</span> 现金价值与预计退保发还金额</div>
+  <p style="margin-bottom:8px; font-size:13px; color:var(--text-light);">以下为<strong>爱伴航基本计划</strong>的现金价值。基于现时投资回报假设。</p>
+  <div class="cash-table">
+    <table>
+      <tr><th>保单年度</th><th>年龄</th><th>已缴总保费</th><th class="num">预期退保总额</th><th class="num">CI/身故赔偿额</th></tr>
+      <tr><td>10</td><td>50岁</td><td>84,460</td><td class="num">9,090</td><td class="num">270,240</td></tr>
+      <tr><td>20</td><td>60岁</td><td>168,920</td><td class="num">60,318</td><td class="num">200,740</td></tr>
+      <tr style="background:#fef3c7;"><td style="font-weight:700;">25</td><td style="font-weight:700;">65岁(缴清)</td><td style="font-weight:700;">211,150</td><td class="num" style="font-weight:700;">92,542</td><td class="num" style="font-weight:700;">210,040</td></tr>
+      <tr style="background:#e8f5e9;"><td style="font-weight:700;">30</td><td style="font-weight:700;">70岁(回本)</td><td style="font-weight:700;">211,150</td><td class="num" style="font-weight:700;">236,416<br><span class="irr">IRR 0.66% · 首次回本 ✅</span></td><td class="num" style="font-weight:700;">352,300</td></tr>
+      <tr><td>40</td><td>80岁</td><td>211,150</td><td class="num">405,662<br><span class="irr">IRR 2.39%</span></td><td class="num">471,940</td></tr>
+      <tr><td>50</td><td>90岁</td><td>211,150</td><td class="num">856,618<br><span class="irr">IRR 3.76%</span></td><td class="num">871,580</td></tr>
+      <tr><td>60</td><td>100岁</td><td>211,150</td><td class="num">1,683,440<br><span class="irr">IRR 4.41%</span></td><td class="num">1,683,440</td></tr>
+    </table>
+  </div>
+  <div class="highlight" style="margin-top:12px;">
+    📊 <strong>退保IRR说明：</strong>65岁缴清后，退保额在<span class="tag-win">70岁（第30年）首次超过已缴总保费 211,150</span>，此后IRR逐年上升。退保拿走的钱可能远少于CI或身故时赔的钱——例如70岁退保 236,416，但身故/CI赔偿可达 352,300。因为退保时终期分红会被打折。
+  </div>
+</div>
+
+<!-- 保费总支出概览 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🧮</span> 保费总支出概览</div>
+
+  <div class="summary-row" style="grid-template-columns: 1fr 1fr;">
+    <div class="summary-card" style="padding: 22px 16px;">
+      <div style="font-size:16px; font-weight:600; color:var(--text-light);">25年实际总保费支出</div>
+      <div style="font-size:34px; font-weight:800; color:var(--brand-primary); margin-top:4px;">USD 211,150</div>
+      <div style="font-size:12px; color:var(--text-light); margin-top:4px;">标准保费 USD 8,446 × 25年</div>
+    </div>
+    <div class="summary-card" style="padding: 22px 16px;">
+      <div style="font-size:16px; font-weight:600; color:var(--text-light);">年缴保费（含征费）</div>
+      <div style="font-size:34px; font-weight:800; color:var(--brand-primary); margin-top:4px;">USD 8,454.45</div>
+      <div style="font-size:12px; color:var(--text-light); margin-top:4px;">USD 8,446 + 征费 USD 8.45</div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:13px; color:var(--text-light); background:var(--blue-bg); padding:12px 16px; border-radius:8px;">
+    📊 <strong>支出拆解：</strong>标准年缴 USD 8,446 × 25年 ＝ USD 211,150；保费征费 USD 8.45/年。合计约 USD 211,362。
+  </div>
+
+  <div class="coverage-card" style="margin-top:20px;">
+    <h4>🟥 保额一览（核心数字）</h4>
+    <table class="coverage-table">
+      <tr>
+        <td>CI基础保额</td>
+        <td>USD 200,000</td>
+      </tr>
+      <tr>
+        <td>首10年升级保障（免费）</td>
+        <td>+USD 70,000<br><span style="font-size:11px;font-weight:400;color:#888;">（基础20万 × 35%，首10年生效）</span></td>
+      </tr>
+      <tr style="background:rgba(192,57,43,0.05);">
+        <td style="font-weight:800;">首10年 CI/身故总保额</td>
+        <td style="font-weight:800;font-size:16px;">USD 270,000</td>
+      </tr>
+    </table>
+    <div class="coverage-note">
+      📌 另有<strong>终期分红（非保证）</strong>，长期持有可进一步提升保额价值
+    </div>
+  </div>
+</div>
+
+<!-- 重要限制 -->
+<div class="card">
+  <div class="card-title"><span class="icon">⚠️</span> 等候期与重要限制</div>
+  <table>
+    <tr><th>限制条款</th><th>内容</th></tr>
+    <tr><td>90天等候期</td><td>保单缮发后<span class="tag-warn">90日内</span>出现的疾病或征状不赔</td></tr>
+    <tr><td>15天生存期</td><td>CI确诊后须生存超过<span class="tag-warn">15天</span></td></tr>
+    <tr><td>多重赔付等候期</td><td>不同疾病：<span class="tag-warn">1年</span>；同种癌症：<span class="tag-warn">3年</span></td></tr>
+    <tr><td>癌症定义排除</td><td>不保早期甲状腺癌（T1N0M0）、早期前列腺癌（T1a/T1b）、RAI III以下CLL、非黑色素瘤皮肤癌、HIV相关癌症、原位癌</td></tr>
+    <tr><td>重大不保事项</td><td>投保前已存在疾病、90天内出现的疾病、自致伤害、部分AIDS/HIV相关疾病</td></tr>
+    <tr><td>中国大陆就医</td><td>须在<span class="tag-warn">友邦指定医院</span>名单内；非港澳ICU一级降至10%</td></tr>
+    <tr><td>终期分红非保证</td><td>退保时终期分红可能较CI/身故赔偿时少；投资市场波动时可能调整</td></tr>
+  </table>
+</div>
+
+<!-- 推广优惠 -->
+<div class="card">
+  <div class="card-title"><span class="icon">🎁</span> 推广活动</div>
+
+  <div style="background:var(--blue-bg); border-radius:10px; padding:14px; margin-bottom:12px;">
+    <div style="font-size:20px; font-weight:600; color:var(--brand-primary);">保费回赠 3.5 个月 = USD 2,464</div>
+    <div style="font-size:11px; color:var(--text-light); margin-top:4px;">年缴 USD 8,446 × 3.5/12 · ⏰ 2026年第三季 · 截止 2026年8月31日</div>
+  </div>
+
+  <div style="font-size:13px; font-weight:600; color:var(--brand-primary); margin-bottom:10px;">💰 叠加优惠（可多选）</div>
+
+  <div class="promo-option" id="optB" onclick="toggleOpt('B')">
+    <div class="check-box"></div>
+    <div class="opt-body">
+      <div class="opt-title">🔴 同时投保指定医疗险 — 额外 +2 个月</div>
+      <div class="opt-desc">指定医疗险：AIA自愿医保尊耀/睿选计划、「尊耀」/「睿选」医疗计划</div>
+      <div class="opt-bonus">+2 个月 = USD 1,408</div>
+    </div>
+  </div>
+
+  <div class="promo-option" id="optC" onclick="toggleOpt('C')">
+    <div class="check-box"></div>
+    <div class="opt-body">
+      <div class="opt-title">🟣 同时投保指定储蓄险 — 额外 +3 个月</div>
+      <div class="opt-desc">指定储蓄险：盈御多元货币计划3、环宇盈活、财富盈活储蓄保险计划</div>
+      <div class="opt-bonus">+3 个月 = USD 2,112</div>
+    </div>
+  </div>
+
+  <hr style="border:none; border-top:1px dashed #d0d0d0; margin:12px 0;">
+
+  <div style="background:var(--brand-primary); color:#fff; border-radius:10px; padding:14px; text-align:center;">
+    <div style="font-size:12px; opacity:0.8;">🎉 总优惠</div>
+    <div class="promo-total-val" style="font-size:24px; font-weight:600; margin-top:2px;">USD 2,464</div>
+    <div class="promo-breakdown" style="font-size:11px; opacity:0.7; margin-top:4px;">3.5 个月保费回赠</div>
+  </div>
+
+  <div style="margin-top:12px; font-size:12px; color:var(--text-muted);">
+    📌 回赠于第1-3个保单年度终结时分期发放：第1年发放2个月，第2年发放最多3个月，第3年发放余下部分。推广期以保单缮发日期（2026年11月30日前）为准。
+  </div>
+</div>
+
+<style>
+.promo-option { display: flex; align-items: flex-start; gap: 10px; padding: 12px; background: #fff; border: 1.5px solid #e0e0dc; border-radius: 10px; margin-bottom: 8px; cursor: pointer; transition: all 0.2s; }
+.promo-option.selected { border-color: var(--brand-primary); background: var(--blue-bg); }
+.promo-option .check-box { width: 20px; height: 20px; border-radius: 4px; border: 2px solid #ccc; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.promo-option.selected .check-box { background: var(--brand-primary); border-color: var(--brand-primary); }
+.promo-option.selected .check-box::after { content: '✓'; color: #fff; font-size: 12px; font-weight: 600; }
+.promo-option .opt-body { flex: 1; }
+.promo-option .opt-title { font-size: 13px; font-weight: 600; color: #2C2C2A; }
+.promo-option .opt-desc { font-size: 11px; color: #888; margin-top: 2px; }
+.promo-option .opt-bonus { font-size: 16px; font-weight: 700; color: #085041; margin-top: 6px; }
+</style>
+
+<script>
+var selected = {B: false, C: false};
+function toggleOpt(code) {
+  selected[code] = !selected[code];
+  var el = document.getElementById('opt' + code);
+  if (selected[code]) el.classList.add('selected');
+  else el.classList.remove('selected');
+  updatePromo();
+}
+function updatePromo() {
+  var months = 3.5;
+  if (selected.B) months += 2;
+  if (selected.C) months += 3;
+  var total = Math.round(8446 * months / 12);
+  document.querySelector('.promo-total-val').textContent = 'USD ' + total.toLocaleString('en-US');
+  var parts = ['3.5 个月'];
+  if (selected.B && selected.C) parts.push('+ 2 个月（医疗）+ 3 个月（储蓄）');
+  else if (selected.B) parts.push('+ 2 个月（医疗）');
+  else if (selected.C) parts.push('+ 3 个月（储蓄）');
+  document.querySelector('.promo-breakdown').textContent = parts.join(' ') + ' = ' + months + ' 个月保费回赠';
+}
+</script>
+
+<!-- 综合评分 -->
+<div class="verdict-card">
+  <div class="verdict-header">
+    <div>
+      <div class="verdict-score-label">综合评价</div>
+    </div>
+    <div>
+      <div class="verdict-title">「爱伴航」保险计划 2</div>
+      <div class="verdict-reason">20万美元保额 · 40岁女性 · 10X多重赔付 + 终身年金 + ICU保障</div>
+    </div>
+  </div>
+  <div class="verdict-highlights">
+    <div class="verdict-hl">
+      <div class="hl-title">🔁 10X 多重赔付</div>
+      <div class="hl-desc">癌症最多赔6次、心脏病2次、中风2次——这三大高发重疾占了理赔的85%以上，反复赔付才是真正实用的保障</div>
+    </div>
+    <div class="verdict-hl">
+      <div class="hl-title">💰 脑退化终身年金</div>
+      <div class="hl-desc">确诊后终身每年领取 USD 12,000，不占用多重赔付额度，用现金流覆盖漫长的照护周期</div>
+    </div>
+    <div class="verdict-hl">
+      <div class="hl-title">🏥 ICU 两级保障</div>
+      <div class="hl-desc">入住ICU满72小时即赔USD 40,000，满120小时+复杂手术赔USD 200,000——即使不属于重疾定义也能获赔</div>
+    </div>
+    <div class="verdict-hl">
+      <div class="hl-title">💵 持续癌症现金</div>
+      <div class="hl-desc">选择每月领 USD 10,000 代替一次性赔付，最长100个月，让癌症治疗期间的现金流不断</div>
+    </div>
+  </div>
+  <div style="margin-top:16px; padding:12px 16px; background:#fff; border-radius:8px; border-left:4px solid var(--brand-accent);">
+    <div style="font-size:14px; font-weight:700; color:#222; margin-bottom:6px;">🎯 适合人群</div>
+    <div style="font-size:13px; color:#555; line-height:1.8;">
+      重视癌症/心脏病/中风等高发重疾反复保障的客户，尤其是有脑退化/柏金逊家族史、看重终身年金兜底的群体，适合预算中等、希望获得全面重疾多次赔付保障的人士。
+    </div>
+  </div>
+</div>
+
+<!-- 数据来源 -->
+<div class="source">
+  <h4>📎 数据来源</h4>
+  <ul>
+    <li>分红保单销售说明文件 — 友邦保险（国际）有限公司：「爱伴航」保险计划 2（25年缴费）</li>
+    <li>保障及利益摘要（P.9-P.12）</li>
+    <li>保障疾病赔偿一览表（P.13-P.15）</li>
+    <li>详细说明 — 退保/CI/身故赔偿金额表（P.19-P.21）</li>
+    <li>总账一览表（P.21-P.22）</li>
+  </ul>
+  <p style="margin-top:8px;">⚠️ 以上数据基于建议书的预期情景（受保人：昕昀女士 · 40岁 · 非吸烟 · 非香港澳门居民）。非保证金额（终期分红）可能受投资回报、理赔经验等因素影响而与实际不同。具体以保单契约条款为准。</p>
+</div>
+
+</div>
+</body>
+</html>
 56种严重疾病 + 不能独立生活 + 须作手术之脑动脉瘤（非严重）= 共58种危疾
 赔偿比例
 100%原有保额 = USD 200,000 + 非保证终期分红（第5年起）
