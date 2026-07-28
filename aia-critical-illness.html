@@ -1,0 +1,24 @@
+重疾险 Skill 推广优惠板块更新计划
+改什么
+1. 模板 template_保障分析.html — 替换推广优惠板块
+删除现有占位符式 plan-box 三卡片（🔵🔴🟣）
+换成跟爱伴航 HTML 最终版一样的交互式设计：
+基础回赠：蓝色底卡片（var(--blue-bg)），显示 保费回赠 {{BASE_MONTHS}} 个月 = USD {{BASE_AMOUNT}}
+两个可勾选卡片（医疗险 +2 月、储蓄险 +3 月），用 .promo-option 样式，点击卡片选中
+总优惠深蓝横幅（var(--brand-primary)），实时显示月数和金额
+JS toggleOpt() + updatePromo()，不四舍五入
+底部保留分期发放说明
+占位符：{{BASE_MONTHS}}、{{BASE_AMOUNT}}、{{EXTRA_MEDICAL}}、{{EXTRA_SAVING}}、{{ANNUAL_PREMIUM}}、{{PROMO_PERIOD}}
+inline CSS: .promo-option、.promo-option.selected 等，配色用蓝色系
+2. SKILL.md — 加推广优惠处理流程
+版块顺序列表里明确：重要限制 → 推广优惠 → 综合评价
+新增「Step 2B: 计算推广优惠」，抄储蓄险 skill 的格式：
+AIA 重疾优惠 PDF 路径：q{季度}-{年份}-critical-illness-protection-offer-highlight-tc.pdf
+⚠️ 从官网抓取 PDF → pdfplumber 提取阶梯表 → 按年缴保费匹配
+公式：金额 = 年缴保费 × 月数 / 12（不四舍五入）
+三项：A（单独）= 基础月数，B（+医疗）= A + 2，C（+储蓄）= A + 2 + 3
+占位符说明表：{{BASE_MONTHS}}、{{BASE_AMOUNT}}、{{EXTRA_MEDICAL}}、{{EXTRA_SAVING}}、{{ANNUAL_PREMIUM}}、{{PROMO_PERIOD}}
+不改什么
+其他板块不动
+CSS 全局变量不动
+assets/ 目录暂不新增脚本（先手动在 skill 里跑公式）
